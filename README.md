@@ -7,7 +7,7 @@
 
 
 <hr color ="blue">
-<img src = "https://media1.giphy.com/media/bJ4TVNYNUympPgcpem/200w.webp?cid=ecf05e47ft5s13gl1gdj7k79kv1i017whtnjzxmtnngbhlnn&rid=200w.webp&ct=g" width =300px align="center">
+<img src = "https://media1.giphy.com/media/bJ4TVNYNUympPgcpem/200w.webp?cid=ecf05e47ft5s13gl1gdj7k79kv1i017whtnjzxmtnngbhlnn&rid=200w.webp&ct=g" width =300px align="middle">
 <hr color ="blue">
 
 
@@ -19,12 +19,5 @@
 				<a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" width="35"/> Kunal Khushwaha Youtube Playlist </a>
 				<br>
 				
-			
-
-			
-
-			
-			
-			
-
+		
 <h2><img src="https://c.tenor.com/ePTe6kEJ1oEAAAAM/hammer.gif" width="30" align="left">⠀Tools  I use :</h2>
