@@ -6,9 +6,9 @@
 <h2><img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30px" align="left"><font face = algerian>Learning Data Structure and algorithms</font></h2>
 
 
-<hr color ="blue">
-<img src = "https://media1.giphy.com/media/bJ4TVNYNUympPgcpem/200w.webp?cid=ecf05e47ft5s13gl1gdj7k79kv1i017whtnjzxmtnngbhlnn&rid=200w.webp&ct=g" width =300px align="middle">
-<hr color ="blue">
+
+<img align="center" src = "https://media1.giphy.com/media/bJ4TVNYNUympPgcpem/200w.webp?cid=ecf05e47ft5s13gl1gdj7k79kv1i017whtnjzxmtnngbhlnn&rid=200w.webp&ct=g" width =300px >
+
 
 
 <p ><font face = "algerian" size=6 >Resources :</font><br>
