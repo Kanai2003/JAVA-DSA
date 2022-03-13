@@ -11,7 +11,8 @@
 
 
 
-<p ><font face = "algerian" size=25px ><h3>Resources : </h3></font><br>
+<p ><h4><font face = "algerian" size=25px >Resources : </font></h4>
+<br>
 <img>
 				<a href="https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" width="35"/> Apna College Youtube Playlist </a>
 				<br>
