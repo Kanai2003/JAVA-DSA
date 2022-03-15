@@ -22,3 +22,8 @@
 				
 		
 <h2><img src="https://c.tenor.com/ePTe6kEJ1oEAAAAM/hammer.gif" width="30" align="left">⠀Tools  I use :</h2>
+
+<p style="text-indent: 2em;">
+				<img src="readme/bullet.gif" width="40">
+				<a href="https://code.visualstudio.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="VsCode" width="35"/>   Visual Studio Code</a>
+			</p>
