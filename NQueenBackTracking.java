@@ -1,5 +1,5 @@
 import java.util.*;
-public class BackTracking {
+public class NQueenBackTracking {
 
     /** permutation problem ------------------- */
     // public static void printPermutation(String str , String perm,int idx){
