@@ -1,20 +1,6 @@
 import java.util.*;
 public class NQueenBackTracking {
 
-    /** permutation problem ------------------- */
-    // public static void printPermutation(String str , String perm,int idx){
-    //     if(str.length() == 0){
-    //         System.out.println(perm);
-    //         return;
-    //     }
-    //     for (int i = 0; i<str.length();i++){
-    //         char currChar = str.charAt(i);
-    //         String newStr = str.substring(0, i) + str.substring(i+1);
-    //         printPermutation(newStr, perm +currChar, idx +1);
-    //     }
-    // }
-
-
     /** N-Queen problem:- check all posible safe position of n queen of n x n chease board(code is for online platform)----------------------  */
     public List<List<String>>  solveNQueens(int n){
         List<List<String>> allBoard = new ArrayList<>();
@@ -95,8 +81,6 @@ public class NQueenBackTracking {
     
     public static void main(String[] args) {
 
-        // String str ="ABC";
-        // printPermutation(str, "", 0);
         
 
         

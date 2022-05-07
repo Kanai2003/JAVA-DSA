@@ -26,11 +26,11 @@ public class recursion{
        
     
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        System.err.println("fitst enter number and then power");
-        int n = sc.nextInt();
-        int x = sc.nextInt();
-        // sumOfNumber(n, 0);
+        // Scanner sc = new Scanner(System.in);
+        // System.err.println("fitst enter number and then power");
+        // int n = sc.nextInt();
+        // int x = sc.nextInt();
+        // // sumOfNumber(n, 0);
 
 
         fun(5);
