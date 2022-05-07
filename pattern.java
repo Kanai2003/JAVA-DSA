@@ -1,5 +1,4 @@
-// import javax.print.attribute.SupportedValuesAttribute;
-// import javax.swing.event.SwingPropertyChangeSupport;
+
 import java.util.*;
 public class pattern {
      public static void main(String[] args) {
