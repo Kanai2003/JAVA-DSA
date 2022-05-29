@@ -10,7 +10,7 @@ Last node of LinkedList is called as "Tail".
 LinkList => 
     1. Singular 
     2. Double ended ()
-    3. Circular (Head and tail is connected to each othaer) . That means it has not any null node
+    3. Circular (Head and tail is connected to each other) . That means it has not any null node
 
 
 */
