@@ -1,6 +1,8 @@
+package Recursion;
+
 import java.util.*;
 
-public class RecursionPracticeProblem {
+public class PracticeProblem {
 
     /*1.print all uper case of a string--------------------------------------------*/
     // public static void uperCase(String str , int idx){
@@ -118,19 +120,19 @@ public class RecursionPracticeProblem {
     //     return powOfTwo(pow-1, res *= 2);
     // }
 
-    /**12.calculate factorial of a number------------------------- */
-    // public static int facNum(int num , int res){
-    //     if(num == 0){
-    //         return res;
-    //     }
-    //     return facNum(num-1, res *= num);
-    // }
+    // /**12.calculate factorial of a number------------------------- */
+    public static int facNum(int num , int res){
+        if(num == 0){
+            return res;
+        }
+        return facNum(num-1, res *= num);
+    }
 
-    /**13. combination sum ----------------------------------------- */
-    public static void comSum(int[] arr, int target){
+    // /**13. combination sum ----------------------------------------- */
+    // public static void comSum(int[] arr, int target){
 
        
-    }
+    // }
 
     
     public static void main(String[] args) {   
@@ -139,7 +141,7 @@ public class RecursionPracticeProblem {
         
 
         /**12.calculate factorial of a number--------------------- */
-        // System.out.println(facNum(5, 1 ));
+        System.out.println(facNum(5, 1 ));
 
         /**11.calculate power of two ------------------------- */
         //  System.out.println(powOfTwo(5, 1));

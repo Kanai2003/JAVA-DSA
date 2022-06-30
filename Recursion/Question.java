@@ -1,5 +1,5 @@
 import java.util.*;
-public class recurtionQuestion {
+public class Question {
     
 
     // public static int sumOfNM(int n){

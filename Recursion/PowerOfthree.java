@@ -1,6 +1,7 @@
+package Recursion;
 public class PowerOfthree {
     public static void main(String[] args) {
-        System.out.println(isPowerOfThree(27));
+        System.out.println(isPowerOfThree(675));
     }
     public static boolean isPowerOfThree(int n) {
        

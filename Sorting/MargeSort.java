@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class SortMarge {
+public class MargeSort {
 
     
     

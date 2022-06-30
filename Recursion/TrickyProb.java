@@ -1,5 +1,5 @@
 import java.util.*;
-public class RecursionTrickyProb{
+public class TrickyProb{
     public static void fun(int n){
         if( n == 0){
             return;

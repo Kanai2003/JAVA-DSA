@@ -1,3 +1,4 @@
+package LinkedList;
 /** Some Propaties of LinkedList =>
         1. Variable size
         2. Non-contiguous Memory

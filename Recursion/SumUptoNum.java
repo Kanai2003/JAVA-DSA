@@ -1,5 +1,5 @@
 import java.util.*;
-public class RecursionSumUptoNum {
+public class SumUptoNum {
 
     public static void sumOfNumber(int n,int result){
         if(n == 0){

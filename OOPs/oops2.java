@@ -1,3 +1,4 @@
+package OOPs;
 /*
 in JAVA oops has 4 types of major concepts. 
 1 => Abstruction -> (it is use to show important data to user and hide all non-important data from user)
@@ -17,7 +18,8 @@ in JAVA oops has 4 types of major concepts.
 
 
 import java.util.*;
-import bank.*;
+
+import OOPs.bank.*;
 
 
 /*poly-morphism("function over loading")------------------------------------------------*/
@@ -26,13 +28,13 @@ import bank.*;
 //     int age ; 
 
 //     public void printInfo(String name){
-//         System.out.println(name);
+//         System.out.println(this.name);
 //     }
 //     public void printInfo(int age){
-//         System.out.println(age);
+//         System.out.println(this.age);
 //     }
 //     public void printInfo(String name,int age){
-//         System.out.println(name + " "+age);
+//         System.out.println(this.name + " "+this.age);
 //     }
 // }
 
@@ -71,9 +73,9 @@ import bank.*;
 //     }
 // }
 // class Horse extends Animal{
-// Horse (){                   /**this function called in java as  "constructor". for construction function at  first main function will call base class's constructor and  then it will call drive or child class's constructor class */
-//     System.out.println("Created a Horse");
-// }
+//     Horse (){                   /**this function called in java as  "constructor". for construction function at  first main function will call base class's constructor and  then it will call drive or child class's constructor class */
+//         System.out.println("Created a Horse");
+//     }
 //     public  void walk(){
 //         System.out.println("Walk on 4 legs");
 //     }
