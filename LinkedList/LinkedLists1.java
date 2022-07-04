@@ -1,4 +1,4 @@
-package LinkedList;
+
 /** Some Propaties of LinkedList =>
         1. Variable size
         2. Non-contiguous Memory
@@ -16,12 +16,12 @@ LinkList =>
 
 */
 
-
-public class LinkedLists {
+// package LinkedList;
+public class LinkedLists1 {
     Node head;
     private int size;            // we are creating a veriable which will help us to calculate size of the linked list
 
-    LinkedLists(){                 //by this constructor we are asigning 0 as a size 
+    LinkedLists1(){                 //by this constructor we are asigning 0 as a size 
         this.size = 0;
     }
 
@@ -91,6 +91,39 @@ public class LinkedLists {
         }
         secondLast.next = null;
     }
+    // delete Last(Different process)-------------
+    // public void deleteLast(){
+    //     if(head == null){
+    //         return;
+    //     }
+    //     if(head.next == null){
+    //         head = null;
+    //         return ;
+    //     }
+    //     Node currNode = head;
+    //     while(currNode.next.next != null){
+    //         currNode = currNode.next;
+    //     }
+    //     currNode.next  = null;
+    // }
+
+
+    //  raverse LinkedList impimentation by iterate way ------------------------
+    public  void reverse(){
+        if(head == null || head.next == null){
+            return;
+        }
+        Node preNode = head;
+        Node currNode = head.next;
+        while(currNode != null){
+            Node nextNode = currNode.next;
+            currNode.next = preNode;
+            preNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null;
+        head = preNode;
+    }
 
 
     //print------------------
@@ -112,7 +145,7 @@ public class LinkedLists {
         return size;
     }
     public static void main(String[] args) {
-        LinkedLists list = new LinkedLists();
+        LinkedLists1 list = new LinkedLists1();
     
         list.addFirst("a");
         list.addFirst("is");
@@ -131,5 +164,11 @@ public class LinkedLists {
         list.printList();
 
         System.out.println(list.getSize());
+
+
+        list.reverse();
+        list.printList();
+
+
     }
 }
