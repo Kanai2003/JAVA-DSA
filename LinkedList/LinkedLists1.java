@@ -122,7 +122,7 @@ public class LinkedLists1 {
             currNode = nextNode;
         }
         head.next = null;
-        head = preNode;
+        head = preNode; 
     }
 
 

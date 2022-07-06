@@ -1,7 +1,7 @@
 // package LinkedList;
 import java.util.*;
 
-public class LinkedListUsingCollectionFramework {
+public class LLUsingCollectionFramework {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<String>();
 
