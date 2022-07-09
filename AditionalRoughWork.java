@@ -99,40 +99,45 @@ public class AditionalRoughWork {
 
 
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int tt = sc.nextInt();
-        int nn[] = new int[tt];
-        int kk[] = new int[tt];
-        for(int  i= 0; i<tt ; i++){
-            nn[i] = sc.nextInt();
-            kk[i] = sc.nextInt();
-        }
-        for(int i = 0; i <tt ; i++){
-            int n  = nn[i];
-            int k = kk[i];
-            int arr [] = new int[n];
-            for(int j = 0; j < n ; j++){
-                arr[j] = j+1 ;
-            }
-            for(int j = 0 ; j < k ; j++){
-                ruffle(arr);
-            }
-            System.out.println(Arrays.toString(arr));
-        }
-    }
-    public static void ruffle(int[] arr){
-        int c = 0;
+    // public static void main(String[] args) {
+    //     Scanner sc = new Scanner(System.in);
+    //     int tt = sc.nextInt();
+    //     int nn[] = new int[tt];
+    //     int kk[] = new int[tt];
+    //     for(int  i= 0; i<tt ; i++){
+    //         nn[i] = sc.nextInt();
+    //         kk[i] = sc.nextInt();
+    //     }
+    //     for(int i = 0; i <tt ; i++){
+    //         int n  = nn[i];
+    //         int k = kk[i];
+    //         int arr [] = new int[n];
+    //         for(int j = 0; j < n ; j++){
+    //             arr[j] = j+1 ;
+    //         }
+    //         for(int j = 0 ; j < k ; j++){
+    //             ruffle(arr);
+    //         }
+    //         System.out.println(Arrays.toString(arr));
+    //     }
+    // }
+    // public static void ruffle(int[] arr){
+    //     int c = 0;
         
-        for(int i = 0 ; i < arr.length ; i+=2){
-            int temp = arr[i];
-            int j = i;
-            while(  j> i-c ){
-                 arr[j] = arr[j-1];
-                 j--;
-            }
-            arr[j]= temp;
-            c++;
-        }
-    }
+    //     for(int i = 0 ; i < arr.length ; i+=2){
+    //         int temp = arr[i];
+    //         int j = i;
+    //         while(  j> i-c ){
+    //              arr[j] = arr[j-1];
+    //              j--;
+    //         }
+    //         arr[j]= temp;
+    //         c++;
+    //     }
+    // }
+
+
+
+
+    
 }
