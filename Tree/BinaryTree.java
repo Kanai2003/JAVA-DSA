@@ -107,6 +107,62 @@ public class BinaryTree {
 
             return leftSum + rightSum + root.data;
         }
+
+        // Height of Tree ---------------------------------
+        public static int heightOfTree(Node root){
+            if(root == null){
+                return 0;
+            }
+            int leftHeight = heightOfTree(root.left);
+            int rightHeight = heightOfTree(root.right);
+
+            int myHeight = Math.max(leftHeight,rightHeight)+1;
+            return myHeight;
+        }
+
+        //Diameter of a tree ---O(n^2)----------------------------------
+        // this is not optimized way to calculate diameter try another one---------------
+        // public static int diameter(Node root){
+        //     if(root == null){
+        //         return 0;
+        //     }
+        //     int dia1 = diameter(root.left);
+        //     int dia2 = diameter(root.right);
+        //     int dia3 = heightOfTree(root.left)+heightOfTree(root.right)+1;
+
+        //     return Math.max(dia1,Math.max(dia2, dia3));
+        // }
+
+
+        // Diameter of a tree ----O(n)-------------------------------------
+        // by this way we are calculation height and diameter simulteniously----- 
+        static class TreeInfo{
+            int height;
+            int diam;
+            TreeInfo(int height , int diam){
+                this.height = height;
+                this.diam = diam;
+            }
+        }
+        public static TreeInfo diameter2(Node root){
+            if(root == null){
+                return new TreeInfo(0,0);
+            }
+            TreeInfo left = diameter2(root.left);
+            TreeInfo right = diameter2(root.right);
+            
+            int myHeight = Math.max(left.height ,right.height)+1;
+
+            int diam1 = left.diam;
+            int diam2 = right.diam;
+            int diam3 = left.height+right.height+1;
+
+            int myDiam = Math.max(Math.max(diam1,diam2),diam3);
+
+            TreeInfo myInfo = new TreeInfo(myHeight,myDiam);
+
+            return myInfo;
+        }
     
     }
           
@@ -131,6 +187,17 @@ public class BinaryTree {
         System.out.println("Total Number of Nodes :\n"+ tree.countNode(root));
 
         System.out.println("Sum of the Tree : \n"+tree.sumOfTree(root));
+
+        System.out.println("Height of the Tree : \n"+tree.heightOfTree(root));
+
+        // System.out.println("Diameter of the Tree : \n"+tree.diameter(root));
+
+        
+        // we are calculating height and diameter both simulteniously---------
+        System.out.println("Diamater of the tree : \n"+tree.diameter2(root).diam);
+        System.out.println("Height of the tree : \n"+tree.diameter2(root).height);
+
+
     }
 
 }
