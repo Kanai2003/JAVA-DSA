@@ -45,6 +45,39 @@ public class BST {
         }
     }
 
+    public static Node delete(Node root , int data){
+        if(root.data>data){
+            root.left = delete(root.left, data);
+        }else if(root.data<data){
+            root.right = delete(root.right, data);
+        }else{
+            //case-1: leaf root
+            if(root.left == null && root.right == null){
+                return null;
+            }
+            //case-2 : only one child
+            if(root.right == null){
+                return root.left;
+            }
+            else if(root.left == null){
+                return root.right;
+            }
+            //case-3: has bost child
+            Node IS = inorderSuccessor(root.right);
+            root.data = IS.data;
+            root.right = delete(root.right,IS.data); 
+        }
+        return root;
+    }
+
+    public static Node inorderSuccessor(Node root){
+        while(root.left != null){
+            root = root.left;
+        }
+        return root;
+    }
+
+
     public static void main(String[] args) {
         int value[] = {3,7,2,6,1,4,5};
         Node root = null;
@@ -58,5 +91,9 @@ public class BST {
         }else{
             System.out.println("not found :(");
         }
+
+        delete(root,5);
+        delete(root, 3);
+        inorder(root);
     }
 }
