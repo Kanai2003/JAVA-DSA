@@ -138,6 +138,50 @@ public class AditionalRoughWork {
 
 
 
+    
+        public static int min_operations(int n, int[] arr, int[] brr) {
+            // code here
+            int count = 0;
+            int i = 0;
+            while( i<n){
+                if(arr[i] == brr[i] ){
+                    i++;
+                    count++;
+                    
+                }else{
+                    int temp = arr[i];
+                    for(int j = i ; j<n-1;j++){
+                        arr[i] = arr[i+1];
+                    }
+                    arr[n-1] = temp;
+                    count++;
+                }
+                
+            }
+            return count;
+        }
+    
 
     
+    public static void main(String[] args) {
+        int arr[] = {12,1,2,3,0,11,4};
+        int n = arr.length;
+        int res[]  = new int[n];
+        for(int i = 0 ; i<n-1; i++){
+            int count = 0;
+            for(int j=i+1;j<n;j=j+2){
+                if(arr[i] > arr[j]){
+                    count++;
+                }
+                if((j+1)<=(n-1) && arr[i]>arr[j+1]){
+                    count++;
+                }
+            }
+            res[i] = count;
+        }
+        res[n-1] = 0;
+        for(int i = 0 ; i<n;i++){
+            System.out.print(res[i]+" ");
+        }
+    }
 }
