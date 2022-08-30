@@ -1,4 +1,4 @@
-package OOPs;
+// package OOPs.Apna_College;
 /*
 in JAVA oops has 4 types of major concepts. 
 1 => Abstruction -> (it is use to show important data to user and hide all non-important data from user)
@@ -19,7 +19,7 @@ in JAVA oops has 4 types of major concepts.
 
 import java.util.*;
 
-import OOPs.bank.*;
+import OOPs.Apna_College.bank.*;
 
 
 /*poly-morphism("function over loading")------------------------------------------------*/

@@ -1,4 +1,4 @@
-package OOPs.bank; 
+// package OOPs.Apna_College.bank; 
 class Account {                     /**If we don't use any key word then it will asign as "default" then we can use it only in this file only  */
     public String name;             /**we can use from any where by using "public" keyword */
     protected String email;         /**By using "protected" it will use in this package and in another package it will use with help of new sub-class*/
