@@ -11,6 +11,4 @@
 // Map Interface => (i)HashMap , (ii)LinkedHashMap , (iii)SortedMap -> TreeMap , (iv)HashTable
 
 
-public class CollectionsFramework {
-    
-}
+
