@@ -1,3 +1,4 @@
+package BrackTracking;
 import java.util.*;
 public class NQueenBackTracking {
 
