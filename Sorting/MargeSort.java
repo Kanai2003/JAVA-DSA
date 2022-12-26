@@ -23,6 +23,7 @@ public class MargeSort {
             mar[x++] = arr[idx2++];
         }
 
+        //coping the whole auxilary array to main array
         for(int i=0,j=start ; i < mar.length ; i++,j++){
             arr[j]= mar[i];
         }
