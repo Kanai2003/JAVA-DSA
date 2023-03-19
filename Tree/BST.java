@@ -204,6 +204,44 @@ public class BST {
     // }    
 
 
+    //return total height of a tree-----------------
+    public static int height(Node root){
+        if(root == null){
+            return 0;
+        }
+        return Math.max(height(root.left),height(root.right))+1;
+    }
+
+    //return total sum value of a tree----------------
+    public static int sumOfTree(Node root){
+        if(root == null){
+            return 0;
+        }
+        return root.data+sumOfTree(root.left)+sumOfTree(root.right);
+    }
+
+    // Diameter of a tree ----O(n)--------------------h-----------------
+    // by this way we are calculation height and diameter simulteniously----- 
+    public static class TreeInfo{
+        int height;
+        int diameter;
+        TreeInfo(int height,int diam){
+            this.height = height;
+            this.diameter = diam;
+        }
+    }
+    public static TreeInfo heightDiameter(Node root){
+        if(root == null){
+            return new TreeInfo(0, 0);
+        }
+        TreeInfo left = heightDiameter(root.left);
+        TreeInfo right = heightDiameter(root.right);
+        int height = Math.max(left.height,right.height)+1;
+        int dim1 = left.diameter, dim2 = right.diameter, dim3 = left.height+right.height+1;
+        int diameter = Math.max(dim1,Math.max(dim2,dim3));
+        return new TreeInfo(height, diameter);
+    }
+
     public static void main(String[] args) {
         int value[] = {3,7,2,6,1,4,5};
         Node root = null;
@@ -230,8 +268,15 @@ public class BST {
         System.out.println("Min: "+ minimum(root) );
         System.out.println("Level Order :");
         levelOrder(root);
-        System.out.println("Left View: ");
-        leftView(root);
+
+        // System.out.println("Left View: "+leftView(root););
+        
+        System.out.println("Height : "+height(root));
+        
+        System.out.println("Sum of tree : "+sumOfTree(root));
+
+        TreeInfo heightDiameter = heightDiameter(root);
+        System.out.println("Height : "+heightDiameter.height+"\nDiameter : "+heightDiameter.diameter);
         
     }
 }

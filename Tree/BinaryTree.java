@@ -176,6 +176,39 @@ public class BinaryTree {
     
     }
           
+
+    //delete a node from a tree--------------------
+    public static Node delete(Node root , int val ){
+        if (root.data > val){
+            root.left = delete(root.left,val);
+        }else if(root.data < val){
+            root.right = delete(root.right, val);
+        }else{
+            //for leaf node 
+            if(root.left==null && root.right==null){
+                return null;
+            }
+            //if one chile is there 
+            if(root.left == null){
+                return root.right;
+            }else if(root.right == null){
+                return root.left;
+            }
+            //if both child is there
+            Node iS = inorderSuccessor(root.right);
+            root.data = iS.data;
+            root.right = delete(root.right,val);
+            
+        }
+        return root;
+    }
+    public static Node inorderSuccessor(Node root){
+        while(root.left!=null){
+            root = root.left;
+        }
+        return root;
+    }
+
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         Tree tree = new Tree();
