@@ -63,25 +63,35 @@ public class BinaryTree {
         public static void levelOrder(Node root){
             Queue<Node> q = new LinkedList<>();
             q.add(root);
-            q.add(null);
+            // q.add(null);
 
-            while(! q.isEmpty()){
-                Node currNode = q.remove();
-                if(currNode == null){
-                    System.out.println();
-                    if(q.isEmpty()){
-                        break;
-                    }else{
-                        q.add(null);
-                    }
-                }else{
-                    System.out.print(currNode.data +" ");
-                    if(currNode.left != null){
-                        q.add(currNode.left);
-                    }
-                    if(currNode.right != null){
-                        q.add(currNode.right);
-                    }
+            // while(! q.isEmpty()){
+            //     Node currNode = q.remove();
+            //     if(currNode == null){
+            //         System.out.println();
+            //         if(q.isEmpty()){
+            //             break;
+            //         }else{
+            //             q.add(null);
+            //         }
+            //     }else{
+            //         System.out.print(currNode.data +" ");
+            //         if(currNode.left != null){
+            //             q.add(currNode.left);
+            //         }
+            //         if(currNode.right != null){
+            //             q.add(currNode.right);
+            //         }
+            //     }
+            // }
+            while(!q.isEmpty()){
+                Node curr =  q.poll();
+                System.out.println(curr.data+" ");
+                if(curr.left != null){
+                    q.add(curr.left);
+                }
+                if(curr.right != null){
+                    q.add(curr.right);
                 }
             }
         }

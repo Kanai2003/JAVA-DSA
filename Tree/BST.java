@@ -26,15 +26,6 @@ public class BST {
         return root;
     }
 
-    // Print the whole tree with inorderSequence---------------------
-    public static void inorder(Node root){
-        if(root == null){
-            return;
-        }
-        inorder(root.left);
-        System.out.print(root.data + " ");
-        inorder(root.right);
-    }
 
     //search any element ----------------------------------------
     public static boolean search (Node root ,int  data){
@@ -121,6 +112,98 @@ public class BST {
         }
         path.remove(path.size()-1);
     }
+
+
+
+
+    //to get sixe of a tree-----------------------
+    public static int size(Node root  ){
+        if (root == null){
+            return 0;
+        }
+        return size(root.left) + size(root.right) + 1;
+    }
+
+
+    //find maximum value of a tree------------------
+    public static int maximum(Node root){
+        if(root == null){
+            return Integer.MIN_VALUE;
+        }
+        return Math.max(root.data, Math.max(maximum(root.left),maximum(root.right)));
+    }
+
+    //find minimum value of a tree---------------
+    public static int minimum(Node root){
+        if(root == null){
+            return Integer.MAX_VALUE;
+        }
+        return Math.min(root.data, Math.min(minimum(root.left),minimum(root.right)));
+    }
+
+
+     // Print the whole tree with inorderSequence---------------------
+    public static void inorder(Node root){
+        if(root == null){
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.data + " ");
+        inorder(root.right);
+    }
+    //print preorder -------------------
+    public static void preorder(Node root){
+        if(root == null){
+            return ;
+        }
+        System.out.println(root.data);
+        preorder(root.left);
+        preorder(root.left);
+    }
+
+    //print post order ----------------------
+    public static void postorder(Node root){
+        if(root == null){
+            return ;
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.println(root.data);
+    }
+
+    //print data level order------------------------
+    public static void levelOrder(Node root){
+        Queue <Node> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            Node curr = q.poll();
+            System.out.print(curr.data + " ");
+            if(curr.left != null){
+                q.add(curr.left);
+            }
+            if(curr.right != null){
+                q.add(curr.right);
+            }
+        }
+    }
+
+
+    //print left view of a tree-------------------
+    // public static void leftView(Node root){
+    //     leftViewUtil(root,1);
+    // }
+    // public static void leftViewUtil(Node root, int level){
+    //     if(root == null){
+    //         return ;
+    //     }
+    //     if(list.get(level) == null){
+    //         list.add(root);
+    //     }
+    //     leftViewUtil(root.left, List, level+1);
+    //     leftViewUtil(root.right, List, level+1);
+    // }    
+
+
     public static void main(String[] args) {
         int value[] = {3,7,2,6,1,4,5};
         Node root = null;
@@ -128,22 +211,27 @@ public class BST {
             root = insert(root, value[i]);
         }
         inorder(root);
-        System.out.println();
-        if(search(root, 6)){
-            System.out.println("found :)");
-        }else{
-            System.out.println("not found :(");
-        }
+        
 
-        delete(root,5);
-        delete(root, 3);
-        inorder(root);
+        // delete(root,5);
+        // delete(root, 3);
+        // inorder(root);
+        // System.out.println();
+        // printInRange(root, 5, 7);
+
+        // System.out.println();
+        // ArrayList<Integer> path = new ArrayList<Integer>();
+        // printRoot2Leaf(root,path);
+
 
         System.out.println();
-        printInRange(root, 5, 7);
-
-        System.out.println();
-        ArrayList<Integer> path = new ArrayList<Integer>();
-        printRoot2Leaf(root,path);
+        System.out.println("Size: "+ size(root) );
+        System.out.println("Max: "+ maximum(root) );
+        System.out.println("Min: "+ minimum(root) );
+        System.out.println("Level Order :");
+        levelOrder(root);
+        System.out.println("Left View: ");
+        leftView(root);
+        
     }
 }
