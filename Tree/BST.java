@@ -220,7 +220,7 @@ public class BST {
         return root.data+sumOfTree(root.left)+sumOfTree(root.right);
     }
 
-    // Diameter of a tree ----O(n)--------------------h-----------------
+    // Diameter of a tree ----O(n)-------------------------------------
     // by this way we are calculation height and diameter simulteniously----- 
     public static class TreeInfo{
         int height;
